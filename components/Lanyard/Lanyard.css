@@ -1,0 +1,22 @@
+:root{
+  --lanyard-right: 18vw;
+  --lanyard-width: 420px;
+  --lanyard-nudge: 0vh;
+}
+
+.lanyard-wrapper{
+  position: sticky;      
+  top: 0;                
+  right: var(--lanyard-right);
+  width: clamp(260px, 24vw, var(--lanyard-width));
+  height: 100vh;         
+  z-index: 40;           
+  pointer-events: none;
+  transform: translateY(var(--lanyard-nudge));
+}
+
+.lanyard-wrapper > canvas{
+  pointer-events: auto;
+  width: 100% !important;
+  height: 100% !important;
+}
